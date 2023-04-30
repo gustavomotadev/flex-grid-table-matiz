@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+:link, :visited {
+    color: unset;
+}
+
+html {
+    background-color: #fff;
+    font-size: 16pt;
+    color: #000;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.navbar {
+    width: 100%;
+    height: 3.6rem;
+    background-color: #fff;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.navbar > :not(.navborder) {
+    margin: 0 1rem;
+}
+
+.navbar li {
+    margin: 0 0.5rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+li {
+    display: inline-block;
+}
+
+.barra-h {
+    width: 100%;
+    height: 0.4rem;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   
+}
+
+.navborder {
+    position: fixed;
+    top: 3.6rem;
+    left: 0;
+    z-index: 1;
+}
+
+section {
+    width: 100%;
+    padding-top: 4rem;
+}
+
+#quem-somos {
+    justify-content: space-between;
+    height: 100vh;
+}
+
+#quem-somos img {
+    height: 100vh;
+    width: 25%;
+}
+
+img {
+    object-fit: cover;
+}
+
+#quem-somos article {
+    width: 50%;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+#quem-somos article > * {
+    margin-bottom: 1rem;
+}
+
+.div-secao {
+    width: 80%;
+    margin: 0.5rem auto 0.5rem auto;
+}
+
+.div-secao > * {
+    margin-bottom: 0.5rem;
+}
+
+.grid {
+    display: grid;
+}
+
+#galeria .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.img-container {
+    width: 15rem;
+    height: 10rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.img-galeria {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.img-galeria:hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#precos {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#precos table {
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+}
+
+td, th {
+    padding: 0.5rem 1rem;
+}
+
+th {
+    color: #fff;
+}
+
+td {
+    font-weight: bold;
+}
+
+.th-mt {
+    background-color: rgb(202, 0, 101);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.th-s {
+    background-color: rgb(101, 0, 202);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.th-s1 {
+    background-color: rgb(90, 151, 213);
+}
+
+.th-s2 {
+    background-color: rgb(46, 127, 207);
+}
+
+.th-s3 {
+    background-color: rgb(0, 101, 202);
+}
+
+.th-mt1 {
+    background-color: rgb(213, 151, 90);
+}
+
+.th-mt2 {
+    background-color: rgb(207, 127, 46);
+}
+
+.th-mt3 {
+    background-color: rgb(202, 101, 0);
+}
+
+.footer-bar {
+    height: 3.6rem;
+    background-color: #222;
+    color: #ddd;
+    font-size: 0.7rem;
+}
+
+.footer-bar img {
+    height: 1.4rem;
+    filter: invert(85%);
+}
+
+@media (max-width: 768px), (orientation: portrait), (max-height: 480px) {
+
+    #quem-somos {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        height: unset;
+    }
+
+    #quem-somos img {
+        min-height: 8rem;
+        height: 25vh;
+        width: 100%;
+    }
+
+    #quem-somos article {
+        margin-top: 2rem;
+        width: 80%;
+    }
+
+    #galeria .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .img-container {
+        width: 75vw;
+        height: 50vw;
+    }
+
+    .th-s {
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        letter-spacing: 0.05rem;
+    }
+
+    td, th {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .hide {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1600px) {
+
+    .div-secao {
+        margin: 1rem auto 1rem auto;
+    }
+    
+    .div-secao > * {
+        margin-bottom: 1rem;
+    }
+
+    .img-container {
+        width: 21rem;
+        height: 14rem;
+    }
+
+}
+
+@media (min-width: 1366px) {
+
+    html {
+        font-size: 18pt;
+    }
+
+    #quem-somos {
+        align-items: start;
+    }
+
+    #quem-somos img {
+        width: 40%;
+    }
+
+    #quem-somos article {
+        width: 40%;
+        margin: auto;
+    }
+
+}
+
+@media (max-height: 640px) {
+
+    html {
+        font-size: 14pt;
+    }
+
+}
+
+@media (max-width: 640px) {
+    
+    html {
+        font-size: 10pt;
+    }
+
+}
+
+@media (max-width: 320px) {
+    
+    html {
+        font-size: 8pt;
+    }
+
+}
